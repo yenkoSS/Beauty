@@ -454,3 +454,27 @@ header {
 }
 
 /* ----- SECTION TESTIMONIALS END ----- */
+
+/* ----- SECTION CONTACT ----- */
+
+.section-contact {
+  padding: 10rem 0;
+}
+
+.card-contact {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.icon-card-contact {
+  width: 6rem;
+  height: auto;
+}
+
+.text-card-contact {
+  font-size: 3rem;
+  color: var(--color-secondary);
+  font-family: "Montserrat", sans-serif;
+}
+/* ----- SECTION CONTACT  END----- */
