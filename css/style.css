@@ -589,3 +589,37 @@ header {
 }
 
 /* ----- SECTION PRICES END ----- */
+
+/* ----- FOOTER ----- */
+
+footer {
+  padding: 5rem 1rem;
+  background-color: var(--color-secondary);
+}
+
+.icon-logo-footer {
+  width: 14rem;
+  height: auto;
+}
+
+.nav-list-footer {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list-footer-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--color-primary);
+}
+
+blockquote {
+  font-size: 14px;
+  color: var(--color-primary-light);
+  text-align: center;
+}
+/* ----- FOOTER END ----- */
