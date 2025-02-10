@@ -50,23 +50,40 @@ html {
 
 /* ----- TYPOGRAPHY ----- */
 
-P {
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 0.5px;
-  line-height: normal;
-  color: var(--color-black);
-}
-
-.text-white {
+h1 {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
   color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
-.text-primary {
-  color: var(--color-primary);
+h1 span {
+  font-size: 3rem;
+  font-weight: 300;
+  display: inline;
 }
 
-.text-hero {
+/* 
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-secondary);
+}
+
+*/
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-secondary);
+}
+
+.heading2-hero {
   color: white;
   text-transform: uppercase;
   font-weight: 700;
@@ -74,7 +91,7 @@ P {
   font-size: 2rem;
 }
 
-.text-hero::before {
+.heading2-hero::before {
   content: "";
   width: 10px;
   height: 10px;
@@ -84,7 +101,35 @@ P {
   margin-right: 20px;
 }
 
-.text-services {
+.heading2-section {
+  background-color: var(--color-secondary);
+  padding: 1rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+.heading2-card-plan-feature {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+.heading2-card-plan-feature-focus {
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: start;
+  color: var(--color-primary);
+}
+
+h3 {
   color: var(--color-black);
   text-transform: uppercase;
   font-weight: 700;
@@ -95,7 +140,7 @@ P {
   align-items: center;
 }
 
-.text-services::before {
+h3::before {
   display: inline-block;
   margin-right: 15px;
   content: "";
@@ -103,6 +148,40 @@ P {
   height: 15px;
   border-radius: 2px;
   background-color: var(--color-secondary);
+}
+
+h4 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-family: "Onest", sans-serif;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+P {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: normal;
+  color: var(--color-black);
+}
+
+.p-section {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: var(--color-secondary);
+}
+
+.text-white {
+  color: white;
+}
+
+.text-primary {
+  color: var(--color-primary);
 }
 
 .text-user {
@@ -116,56 +195,6 @@ P {
   font-style: italic;
 }
 
-h1 {
-  font-size: 8rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-}
-
-h1 span {
-  font-size: 3rem;
-  font-weight: 300;
-  display: block;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 500;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-
-  color: var(--color-secondary);
-}
-
-h3 {
-  font-size: 3rem;
-  letter-spacing: 4px;
-  font-weight: 700;
-  text-align: center;
-  font-family: "Montserrat", sans-serif;
-  text-transform: uppercase;
-  color: var(--color-secondary);
-}
-
-h4 {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-family: "Onest", sans-serif;
-  color: var(--color-secondary);
-}
-
-.h4-absolute {
-  position: absolute;
-  top: -2rem;
-  left: 4rem;
-  background-color: var(--color-secondary);
-  padding: 1rem;
-  color: var(--color-primary);
-}
 /* ----- TYPOGRAPHY END ----- */
 
 /* ----- BUTTONS ----- */
@@ -444,13 +473,6 @@ header {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 16px;
-}
-
-.text-card-plan-feature {
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
 }
 
 .before-full::before {
