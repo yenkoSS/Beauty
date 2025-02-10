@@ -16,10 +16,13 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 40%;
   font-family: "Onest", sans-serif;
+  scroll-behavior: smooth;
 }
-
+.container {
+  padding: 0px 15px;
+}
 .h-container {
   height: 88%;
 }
@@ -48,10 +51,10 @@ html {
 /* ----- TYPOGRAPHY ----- */
 
 P {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.5px;
-  line-height: 26px;
+  line-height: normal;
   color: var(--color-black);
 }
 
@@ -68,7 +71,7 @@ P {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 5px;
-  font-size: 16px;
+  font-size: 2rem;
 }
 
 .text-hero::before {
@@ -128,7 +131,7 @@ h1 span {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 500;
   text-align: center;
   font-family: "Montserrat", sans-serif;
@@ -252,25 +255,79 @@ header {
   height: auto;
 }
 
-.nav-header-list {
+.nav-header-list-expand {
   list-style-type: none;
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
+  display: none;
 }
 
-.nav-header-link {
+.nav-header-list-expand .nav-header-link {
   text-decoration: none;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 700;
   color: var(--color-primary);
   text-transform: uppercase;
-  letter-spacing: 0.6rem;
+  letter-spacing: 2px;
   transition: 300ms ease-in;
 }
 
 .nav-header-link:hover {
   color: white;
+}
+
+.nav-header-list-small {
+  padding: 15rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-secondary);
+  display: none;
+  list-style-type: none;
+}
+
+.nav-header-list-small .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.nav-header-list-small .nav-header-link {
+  text-decoration: none;
+  font-size: 3rem;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.icon-exit {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+.logo-menu-small {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  bottom: 50px;
+}
+
+.icon-nav-menu {
+  width: 4rem;
+  height: auto;
+}
+
+.empty {
+  display: none;
 }
 
 .quick-contact {
@@ -493,7 +550,8 @@ header {
 }
 
 .text-card-contact {
-  font-size: 3rem;
+  font-size: 2rem;
+  font-weight: 500;
   color: var(--color-secondary);
   font-family: "Montserrat", sans-serif;
 }
@@ -559,7 +617,7 @@ header {
 }
 
 .box-table-prices {
-  width: 60%;
+  width: 100%;
 }
 
 .table-prices {
@@ -605,13 +663,15 @@ footer {
 .nav-list-footer {
   list-style-type: none;
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   justify-content: space-between;
 }
 
 .nav-list-footer-link {
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
   color: var(--color-primary);
@@ -623,3 +683,43 @@ blockquote {
   text-align: center;
 }
 /* ----- FOOTER END ----- */
+
+@media screen and (min-width: 768px) {
+  .nav-list-footer {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  html {
+    font-size: 55%;
+  }
+  .nav-header-list-expand {
+    display: flex;
+  }
+  .empty {
+    display: block;
+  }
+
+  .box-table-prices {
+    width: 80%;
+  }
+
+  .icon-nav-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 62.5%;
+  }
+  .nav-list-footer-link {
+    font-size: 2rem;
+  }
+
+  .box-table-prices {
+    width: 60%;
+  }
+}

@@ -10,40 +10,67 @@
     <title>Salon Brasov</title>
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav class="nav-header">
         <a href="">
           <img src="icons/logoheader.svg" class="logo-header" alt="" />
         </a>
-        <ul class="nav-header-list">
+        <ul class="nav-header-list-expand">
           <li>
-            <a href="#" class="nav-header-link">Servicii</a>
+            <a href="#servicii" class="nav-header-link">Servicii</a>
           </li>
           <li>
-            <a href="#" class="nav-header-link">Tarife</a>
+            <a href="#tarife" class="nav-header-link">Tarife</a>
           </li>
           <li>
-            <a href="#" class="nav-header-link">Abonamente</a>
+            <a href="#abonamente" class="nav-header-link">Abonamente</a>
           </li>
           <li>
-            <a href="#" class="nav-header-link">Galerie</a>
+            <a href="#galerie" class="nav-header-link">Galerie</a>
           </li>
           <li>
-            <a href="#" class="nav-header-link">Testimoniale</a>
+            <a href="#testimoniale" class="nav-header-link">Testimoniale</a>
           </li>
           <li>
-            <a href="#" class="nav-header-link">Contact</a>
+            <a href="#contact" class="nav-header-link">Contact</a>
           </li>
         </ul>
+        <ul class="nav-header-list-small">
+          <img src="icons/close.svg" alt="" class="icon-exit" />
+          <div class="wrapper">
+            <li>
+              <a href="#servicii" class="nav-header-link">Servicii</a>
+            </li>
+            <li>
+              <a href="#tarife" class="nav-header-link">Tarife</a>
+            </li>
+            <li>
+              <a href="#abonamente" class="nav-header-link">Abonamente</a>
+            </li>
+            <li>
+              <a href="#galerie" class="nav-header-link">Galerie</a>
+            </li>
+            <li>
+              <a href="#testimoniale" class="nav-header-link">Testimoniale</a>
+            </li>
+            <li>
+              <a href="#contact" class="nav-header-link">Contact</a>
+            </li>
+          </div>
+          <img src="icons/face.svg" alt="" class="logo-menu-small" />
+        </ul>
+        <a href="" class="nav-menu-small"
+          ><img src="icons/hamburger.svg" class="icon-nav-menu"
+        /></a>
         <div class="empty"></div>
       </nav>
       <div class="container h-container">
         <div class="row h-100 d-flex align-items-center justify-content-start">
           <div
-            class="col-lg-10 d-flex flex-column justify-content-center align-items-start"
+            class="col-lg-6 d-flex flex-column justify-content-center align-items-start"
           >
             <h1 class="mbot-30">Salon Beauty</h1>
-            <p class="text-primary mbot-20" style="width: 50%">
+            <p class="text-primary mbot-20">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               Molestias quae recusandae nulla alias tempore exercitationem error
               suscipit, porro qui voluptas eum totam minus placeat debitis
@@ -60,13 +87,16 @@
         </div>
       </div>
     </header>
-    <section class="section-services">
-      <img src="icons/plant.svg" alt="" class="icon-section" />
-      <h3 class="mbot-30">Servicii</h3>
-      <h2 class="mbot-100">
-        Fie că îți dorești o schimbare de look sau ai nevoie de cosmetică
-        profesională, ne găsești cu brațele deschise.
-      </h2>
+    <section id="servicii" class="section-services">
+      <div class="container-fluid">
+        <img src="icons/plant.svg" alt="" class="icon-section" />
+        <h3 class="mbot-30">Servicii</h3>
+        <h2 class="mbot-100">
+          Fie că îți dorești o schimbare de look sau ai nevoie de cosmetică
+          profesională, ne găsești cu brațele deschise.
+        </h2>
+      </div>
+
       <div class="row g-0">
         <div class="col-lg-6">
           <img src="img/coafor.jpg" alt="" class="img-fluid" />
@@ -89,7 +119,7 @@
             <h2 class="text-services">Îndreptare sau permanent</h2>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-4">
           <div class="box-service">
             <h4 class="h4-absolute">Manichiură & pedichiură</h4>
 
@@ -113,7 +143,7 @@
             </h2>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 order-3">
           <img src="img/manichiurapedichiura.jpg" alt="" class="img-fluid" />
         </div>
         <div class="col-lg-6">
@@ -144,7 +174,7 @@
         </div>
       </div>
     </section>
-    <section class="section-prices">
+    <section id="tarife" class="section-prices">
       <img src="icons/plant.svg" alt="" class="icon-section-white" />
       <h3 class="mbot-30 text-white">Tarife</h3>
       <h2 class="mbot-100">
@@ -473,7 +503,7 @@
         </div>
       </div>
     </section>
-    <section class="section-plans">
+    <section id="abonamente" class="section-plans">
       <img src="icons/plant.svg" alt="" class="icon-section" />
       <h3 class="mbot-30">Abonamente</h3>
       <h2 class="mbot-100">
@@ -481,22 +511,30 @@
         profesională, ne găsești cu brațele deschise.
       </h2>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
+        <div class="row" style="row-gap: 7rem">
+          <div class="col-lg-4 d-flex justify-content-center">
             <div class="card-plan">
               <img src="icons/face.svg" alt="" class="icon-card-plan mbot-10" />
               <p class="text-card-plan mbot-10">Pachet Starter</p>
               <p class="text-card-plan-price mbot-30">300<span>LEI</span></p>
               <div class="box-card-plan-features mbot-30">
-                <p class="text-card-plan-feature before-full">Coafură</p>
-                <p class="text-card-plan-feature before-full">Manichiură</p>
-                <p class="text-card-plan-feature before-empty">Pedichiură</p>
-                <p class="text-card-plan-feature before-empty">Cosmetică</p>
+                <p class="text-card-plan-feature before-full mbot-10">
+                  Coafură
+                </p>
+                <p class="text-card-plan-feature before-full mbot-10">
+                  Manichiură
+                </p>
+                <p class="text-card-plan-feature before-empty mbot-10">
+                  Pedichiură
+                </p>
+                <p class="text-card-plan-feature before-empty mbot-10">
+                  Cosmetică
+                </p>
               </div>
               <button class="btn-order">Comandă</button>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 d-flex justify-content-center">
             <div class="card-plan card-focus">
               <img src="icons/face.svg" alt="" class="icon-card-plan mbot-10" />
               <p class="text-card-plan mbot-10">Pachet Medium</p>
@@ -504,11 +542,13 @@
                 500<span>LEI</span>
               </p>
               <div class="box-card-plan-features mbot-30">
-                <p class="text-card-plan-feature before-full-focus">Coafură</p>
-                <p class="text-card-plan-feature before-full-focus">
+                <p class="text-card-plan-feature before-full-focus mbot-10">
+                  Coafură
+                </p>
+                <p class="text-card-plan-feature before-full-focus mbot-10">
                   Manichiură
                 </p>
-                <p class="text-card-plan-feature before-full-focus">
+                <p class="text-card-plan-feature before-full-focus mbot-10">
                   Pedichiură
                 </p>
                 <p class="text-card-plan-feature before-empty-focus">
@@ -518,15 +558,21 @@
               <button class="btn-order-focus">Comandă</button>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 d-flex justify-content-center">
             <div class="card-plan">
               <img src="icons/face.svg" alt="" class="icon-card-plan mbot-10" />
               <p class="text-card-plan mbot-10">pachet Pro</p>
               <p class="text-card-plan-price mbot-30">800<span>LEI</span></p>
               <div class="box-card-plan-features mbot-30">
-                <p class="text-card-plan-feature before-full">Coafură</p>
-                <p class="text-card-plan-feature before-full">Manichiură</p>
-                <p class="text-card-plan-feature before-full">Pedichiură</p>
+                <p class="text-card-plan-feature before-full mbot-10">
+                  Coafură
+                </p>
+                <p class="text-card-plan-feature before-full mbot-10">
+                  Manichiură
+                </p>
+                <p class="text-card-plan-feature before-full mbot-10">
+                  Pedichiură
+                </p>
                 <p class="text-card-plan-feature before-full">Cosmetică</p>
               </div>
               <button class="btn-order">Comandă</button>
@@ -535,7 +581,7 @@
         </div>
       </div>
     </section>
-    <section class="section-testimonials">
+    <section id="testimoniale" class="section-testimonials">
       <img src="icons/plant.svg" alt="" class="icon-section-white" />
       <h3 class="mbot-30">Testimoniale</h3>
       <h2 class="mbot-100 text-white">
@@ -543,8 +589,8 @@
         și să ne lași si tu un mesaj.
       </h2>
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
+        <div class="row g-5">
+          <div class="col-lg-4 d-flex justify-content-center">
             <div class="card-testimonial">
               <img
                 src="icons/quote.svg"
@@ -564,7 +610,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 d-flex justify-content-center">
             <div class="card-testimonial">
               <img
                 src="icons/quote.svg"
@@ -583,7 +629,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 d-flex justify-content-center">
             <div class="card-testimonial">
               <img
                 src="icons/quote.svg"
@@ -606,7 +652,7 @@
         </div>
       </div>
     </section>
-    <section class="section-contact">
+    <section id="contact" class="section-contact">
       <img src="icons/plant.svg" alt="" class="icon-section" />
       <h3 class="mbot-30">Contact</h3>
       <h2 class="mbot-100">
@@ -614,7 +660,7 @@
         și să ne lași si tu un mesaj.
       </h2>
       <div class="container">
-        <div class="row">
+        <div class="row g-10">
           <div class="col-lg-6 d-flex flex-column justify-content-center">
             <div class="card-contact mbot-50">
               <img
@@ -653,30 +699,34 @@
     <footer>
       <div class="container">
         <div class="row d-flex align-items-center mbot-30">
-          <div class="col-lg-4">
+          <div class="col-12 col-lg-4 d-flex justify-content-center">
             <a href="#" class="logo-footer">
               <img src="icons/logoheader.svg" alt="" class="icon-logo-footer" />
             </a>
           </div>
-          <div class="col-lg-8">
+          <div class="col-12 col-lg-8 d-flex justify-content-center">
             <ul class="nav-list-footer">
               <li class="nav-list-footer-item">
-                <a href="" class="nav-list-footer-link">Acasă</a>
+                <a href="#home" class="nav-list-footer-link">Acasă</a>
               </li>
               <li class="nav-list-footer-item">
-                <a href="" class="nav-list-footer-link">Servicii</a>
+                <a href="#servicii" class="nav-list-footer-link">Servicii</a>
               </li>
               <li class="nav-list-footer-item">
-                <a href="" class="nav-list-footer-link">Tarife</a>
+                <a href="#tarife" class="nav-list-footer-link">Tarife</a>
               </li>
               <li class="nav-list-footer-item">
-                <a href="" class="nav-list-footer-link">Abonamente</a>
+                <a href="#abonamente" class="nav-list-footer-link"
+                  >Abonamente</a
+                >
               </li>
               <li class="nav-list-footer-item">
-                <a href="" class="nav-list-footer-link">Galerie</a>
+                <a href="#galerie" class="nav-list-footer-link">Galerie</a>
               </li>
               <li class="nav-list-footer-item">
-                <a href="" class="nav-list-footer-link">Testimoniale</a>
+                <a href="#testimoniale" class="nav-list-footer-link"
+                  >Testimoniale</a
+                >
               </li>
             </ul>
           </div>
@@ -684,5 +734,6 @@
         <blockquote>Copyright © 2025 Beauty</blockquote>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
