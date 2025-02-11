@@ -35,6 +35,17 @@ html {
   row-gap: 10rem;
 }
 
+.row {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 400ms ease;
+}
+
+.show-row {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
 .img-fluid {
   width: 100%;
   height: auto;
@@ -60,7 +71,7 @@ h1 {
 
 h1 span {
   font-size: 3rem;
-  font-weight: 300;
+  font-weight: 400;
   display: inline;
 }
 
@@ -158,6 +169,14 @@ h4 {
   font-family: "Onest", sans-serif;
   color: var(--color-secondary);
   text-align: center;
+  transform: translateX(-200px);
+  opacity: 0;
+  transition: 300ms ease-in;
+}
+
+.show-h4 {
+  transform: translateX(0px);
+  opacity: 1;
 }
 
 P {
@@ -262,7 +281,9 @@ button:hover {
 
 header {
   height: 100vh;
-  background-image: url("../img/hero.jpg");
+  background-image: linear-gradient(to bottom, #00000049, #00000031),
+    url("../img/herophone.jpg");
+  /*background-image: url("../img/herophone.jpg");*/
   background-size: cover;
   background-position: center;
 }
@@ -277,6 +298,24 @@ header {
   background-color: rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(15px);
   height: 12%;
+}
+
+.nav-fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 4;
+  animation-name: showNavFixed;
+  animation-duration: 300ms;
+}
+
+@keyframes showNavFixed {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
 }
 
 .logo-header {
@@ -307,18 +346,19 @@ header {
 }
 
 .nav-header-list-small {
-  padding: 15rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
+  padding: 15rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: var(--color-secondary);
   display: none;
   list-style-type: none;
+  z-index: 10;
 }
 
 .nav-header-list-small .wrapper {
@@ -327,7 +367,7 @@ header {
   gap: 3rem;
 }
 
-.nav-header-list-small .nav-header-link {
+.nav-header-list-small .nav-header-link-small {
   text-decoration: none;
   font-size: 3rem;
   color: var(--color-primary);
@@ -345,7 +385,7 @@ header {
 
 .logo-menu-small {
   position: absolute;
-  width: 100px;
+  width: 60px;
   height: auto;
   bottom: 50px;
 }
@@ -397,6 +437,14 @@ header {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 400ms ease-out;
+}
+
+.show-icon-section {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 /* BOX SERVICE */
@@ -406,7 +454,8 @@ header {
   width: 100%;
   height: 100%;
   position: relative;
-  padding: 6rem 5rem 5rem 8rem;
+
+  padding: 6rem 1rem 5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -537,6 +586,14 @@ header {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  transform: translateY(150px);
+  opacity: 1;
+  transition: 400ms ease-out;
+}
+
+.show-icon-section-white {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 .card-testimonial {
@@ -654,11 +711,19 @@ header {
 }
 
 .table-prices th {
-  text-align: start;
+  text-align: end;
 }
 
 .table-prices td {
   color: var(--color-black);
+}
+
+.table-prices td:nth-child(2) {
+  text-align: end;
+}
+
+.table-prices td:nth-child(3) {
+  text-align: end;
 }
 
 .table-prices tr {
@@ -713,6 +778,12 @@ blockquote {
   }
 }
 
+@media screen and (min-width: 576px) {
+  .box-service {
+    padding: 6rem 5rem 5rem 8rem;
+  }
+}
+
 @media screen and (min-width: 992px) {
   html {
     font-size: 55%;
@@ -721,7 +792,8 @@ blockquote {
     display: flex;
   }
   .empty {
-    display: block;
+    display: flex;
+    width: 1px;
   }
 
   .box-table-prices {
@@ -733,9 +805,15 @@ blockquote {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
   html {
     font-size: 62.5%;
+  }
+
+  header {
+    background-image: url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
   }
   .nav-list-footer-link {
     font-size: 2rem;
