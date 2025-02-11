@@ -570,6 +570,12 @@ header {
 
 /* ----- SECTION PLANS END ----- */
 
+/* SECTION GALLERY */
+.section-gallery {
+  padding: 10rem 0 0 0;
+  background-color: var(--color-primary);
+}
+/* SECTION GALLERY END */
 /* ----- SECTION TESTIMONIALS ----- */
 
 .section-testimonials {
